@@ -64,7 +64,7 @@ def readFeatures():
         appendToTxt(fileName, featureVector)
         print(fileName, featureVector)
 
-
+# 第一次运行需要调用readFeatures来将./pics下的图片全部转换为向量，转换完以后便可注释掉
 # readFeatures()
 
 def findMostSimiliar(fileNames, featureVectors, vector):
@@ -87,8 +87,6 @@ def matchSimiliar(pic):
     # 找到最近似的图片，并返回图片名
     return findMostSimiliar(fileNames, featureVectors, feature)
 
-# 第一次运行需要调用readFeatures来将./pics下的图片全部转换为向量，转换完以后便可注释掉
-#readFeatures()
 print(matchSimiliar("./testPics/test.jpg"))
 
 
